@@ -1,0 +1,14 @@
+{% if instructor_names %}
+    <h1> Here are the name of the professors</h2>
+    <ul>
+    {% for name in instructor_names %}
+        <li><a href="/polls/{{ name }}/">{{ name}}</a></li>
+        {% comment %} <p> {{name}}</p> {% endcomment %}
+    {% endfor %}
+    {% comment %} <p>
+        {{instructor_names}}    
+    </p> {% endcomment %}
+    </ul>
+{% else %}
+    <p>No instructors</p>
+{% endif %}
